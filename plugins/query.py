@@ -26,7 +26,7 @@ from image.edit_5 import normalglitch_1, normalglitch_2, normalglitch_3, normalg
 # configuration
 from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, PICS, IMDB, PM_IMDB, SINGLE_BUTTON, PROTECT_CONTENT, \
     SPELL_CHECK_REPLY, IMDB_TEMPLATE, IMDB_DELET_TIME, START_MESSAGE, PMFILTER, G_FILTER, BUTTON_LOCK, BUTTON_LOCK_TEXT, SHORT_URL, SHORT_API
-
+from info import REQ_CHANNEL
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
