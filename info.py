@@ -64,7 +64,7 @@ SHORT_URL = environ.get("SHORT_URL")
 SHORT_API = environ.get("SHORT_API")
 
 #Rrq Fsub
-REQ_CHANNEL = environ.get("REQ_CHANNEL", "-1001600952944")
+REQ_CHANNEL = environ.get("REQ_CHANNEL", "-1001323263422")
 REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else AUTH_CHANNEL
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 FSUB_MODE = "REQ"
