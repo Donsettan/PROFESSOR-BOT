@@ -9,7 +9,7 @@ aiohttp==3.8.3
 tgcrypto==1.2.5
 requests
 bs4==0.0.1
-pyrogram
+pyrofork
 
 #---database---#
 pymongo[srv]==3.12.3
