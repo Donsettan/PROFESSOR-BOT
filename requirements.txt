@@ -12,7 +12,7 @@ bs4==0.0.1
 pyrofork
 
 #---database---#
-pymongo[srv]
+pymongo[srv]==4.4.1
 marshmallow
 umongo
 motor
