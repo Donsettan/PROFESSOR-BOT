@@ -40,7 +40,7 @@ wheel
 ujson
 wget
 pytz
-dnspython
+dnspython==2.3.0
 
 
 
