@@ -12,10 +12,10 @@ bs4==0.0.1
 pyrofork
 
 #---database---#
-pymongo==4.4.1
-marshmallow==3.20.1
-umongo==3.1.0
-motor==3.3.1
+pymongo[srv]==4.4.1
+marshmallow
+umongo
+motor
 
 #---ytdl----#
 youtube-search-python
