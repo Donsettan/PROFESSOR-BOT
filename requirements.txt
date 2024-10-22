@@ -10,7 +10,7 @@ aiohttp==3.10.10
 tgcrypto==1.2.5
 requests
 bs4==0.0.2
-pyrofork
+pip install https://github.com/KurimuzonAkuma/pyrogram/archive/v2.1.30.zip
 
 #---database---#
 pymongo>=4.9.0,<4.10 
