@@ -10,7 +10,7 @@ aiohttp==3.10.10
 tgcrypto==1.2.5
 requests
 bs4==0.0.2
-pyrofork
+git+https://github.com/KurimuzonAkuma/pyrogram.git
 
 #---database---#
 pymongo>=4.9.0,<4.10 
