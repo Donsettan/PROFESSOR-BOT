@@ -9,7 +9,7 @@ from database.ia_filterdb import  Media
 from typing import Union, Optional, AsyncGenerator
 from utils import temp, __repo__, __license__, __copyright__, __version__
 from info import API_ID, API_HASH, BOT_TOKEN, LOG_CHANNEL, UPTIME, WEB_SUPPORT, LOG_MSG
-PORT = environ.get("PORT", "8090")
+PORT = environ.get("PORT", "8080")
 
 # Get logging configurations
 logging.config.fileConfig("logging.conf")
