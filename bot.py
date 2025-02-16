@@ -1,5 +1,5 @@
 import os, math, logging, datetime, pytz, logging.config
-
+from os import environ
 from aiohttp import web
 from pyrogram import Client, types
 from database.users_chats_db import db
@@ -7,6 +7,7 @@ from database.ia_filterdb import  Media
 from typing import Union, Optional, AsyncGenerator
 from utils import temp, __repo__, __license__, __copyright__, __version__
 from info import API_ID, API_HASH, BOT_TOKEN, LOG_CHANNEL, UPTIME, WEB_SUPPORT, LOG_MSG
+PORT = environ.get("PORT", "8090")
 
 # Get logging configurations
 logging.config.fileConfig("logging.conf")
@@ -48,11 +49,12 @@ class Bot(Client):
         try: await self.send_message(LOG_CHANNEL, text=LOG_MSG.format(me.first_name, date, tame, __repo__, __version__, __license__, __copyright__), disable_web_page_preview=True)   
         except Exception as e: logging.warning(f"Bot Isn't Able To Send Message To LOG_CHANNEL \n{e}")
         
-        if bool(WEB_SUPPORT) is True:
-            app = web.AppRunner(web.Application(client_max_size=30000000))
-            await app.setup()
-            await web.TCPSite(app, "0.0.0.0", 8080).start()
-            logging.info("Web Response Is Running......🕸️")
+        app = web.AppRunner(await web_server())
+        await app.setup()
+        bind_address = "0.0.0.0"
+        await web.TCPSite(app, bind_address, PORT).start() 
+        await restart_index(Media
+                            
             
     async def stop(self, *args):
         await super().stop()
