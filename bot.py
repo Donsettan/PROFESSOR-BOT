@@ -71,29 +71,6 @@ class Bot(Client):
                 yield message
                 current += 1
 
-import requests
-import threading
-import time
-
-# Keep-alive function
-def keep_bot_alive():
-    BOT_TOKEN = "5385553998:AAH7ID5UG_pixxocYWZVkDcooKLdodkZDX0"  # Replace with your actual bot token
-    while True:
-        try:
-            response = requests.get(f"https://api.telegram.org/bot{BOT_TOKEN}/getMe")
-            if response.status_code == 200:
-                print("Bot is active")
-            else:
-                print("Keep-alive request failed:", response.status_code)
-        except Exception as e:
-            print("Keep-alive error:", e)
-        
-        time.sleep(300)  # Ping every 5 minutes
-
-# Start keep-alive in a background thread
-threading.Thread(target=keep_bot_alive, daemon=True).start()
-
-# Run the bot
 Bot().run()
         
 
